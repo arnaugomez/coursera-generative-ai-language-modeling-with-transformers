@@ -1,24 +1,24 @@
 ### Study Notes: Transformers for Classification Encoder
 
 #### Overview
+
 This video explains how **transformer-based models** are utilized for **text classification**. Key takeaways include:
+
 - Creating the text processing pipeline.
 - Building, training, and testing the transformer model.
 - Understanding the role of **attention layers** in retaining contextual relationships.
 
----
-
 ### Key Concepts
 
 #### Why Transformers for Text Classification?
+
 - Traditional neural networks lose **contextual relationships** between words in documents.
 - Transformers, with their **attention mechanisms**, process the entire sequence collectively, retaining contextual information.
-
----
 
 ### Steps to Build a Transformer Model for Text Classification
 
 #### 1. Dataset Preparation
+
 - **Dataset Used**: AG_NEWS dataset (contains news articles and their categories).
 - **Steps**:
   1. Create iterators for training and testing splits using **torchtext**.
@@ -29,24 +29,27 @@ This video explains how **transformer-based models** are utilized for **text cla
   4. **Tokenizer**: Tokenizes English text, generates tokens, and constructs a vocabulary.
   5. **Custom Collate Function**: Handles sequence classification and applies **zero padding** to standardize sequence lengths.
 
----
-
 #### 2. Model Construction
+
 - **Embedding Layer**:
+
   - Created using `nn.Embedding` in PyTorch.
   - Maps vocabulary tokens to dense vectors (`embedding_dim`).
 
 - **Positional Encoding**:
+
   - Adds temporal context by embedding sequence order into word embeddings.
   - Ensures the model captures both **semantic** and **positional** information.
 
 - **Transformer Encoder**:
+
   - Consists of multiple layers using `nn.TransformerEncoderLayer`.
   - Configurations include:
     - **Number of layers (num_layers)**
     - **Number of attention heads (n_heads)**
 
 - **Linear Classifier**:
+
   - A `nn.Linear` layer serves as the classifier.
   - Input size: Embedding dimension.
   - Output size: Number of classes (categories).
@@ -68,9 +71,8 @@ This video explains how **transformer-based models** are utilized for **text cla
   - **Prediction**:
     - Aggregated embeddings passed to the linear classifier to predict text categories.
 
----
-
 #### 3. Model Training
+
 - **Loss Function**: Cross-Entropy Loss for multi-class classification.
 - **Optimizer**: Stochastic Gradient Descent (SGD) with:
   - Learning rate: `0.1`
@@ -81,9 +83,8 @@ This video explains how **transformer-based models** are utilized for **text cla
 - **Output**:
   - The model predicts **64 label outputs** (one per sample in the batch).
 
----
-
 ### Key Highlights of the Transformer Model
+
 1. **Retains Context**:
    - Unlike traditional models, transformers utilize attention layers to process sequences collectively, ensuring context is preserved.
 2. **Efficient Encoding**:
@@ -91,9 +92,8 @@ This video explains how **transformer-based models** are utilized for **text cla
 3. **Generalization**:
    - Performance on **larger datasets** is typically better than traditional neural networks.
 
----
-
 ### Summary of the Pipeline
+
 1. **Data Pipeline**:
    - Create iterators, allocate datasets, tokenize text, and build vocabulary.
    - Design custom functions for padding and data loading.
@@ -107,9 +107,8 @@ This video explains how **transformer-based models** are utilized for **text cla
 4. **Output**:
    - Model predicts text categories with improved accuracy due to context-aware processing.
 
----
-
 ### Recap of Learning Outcomes
+
 - Understand how transformers retain **context** using attention layers.
 - Build and train a **text classification model** using transformers.
 - Perform standard classification tasks while leveraging the unique architecture of transformers for sequence processing.
