@@ -1,10 +1,10 @@
-### Study Notes: Attention Mechanisms in Language Translation
+# Study Notes: Attention Mechanisms in Language Translation
 
-#### Overview of the Video
+## Overview of the Video
 
 This lesson introduces **attention mechanisms** and explains their application in language translation, word embeddings, and sequences. The concept is broken down through examples, such as Python dictionaries, and extended to how attention is used in machine learning models like transformers.
 
-#### Learning Objectives
+## Learning Objectives
 
 By the end of the lesson, you'll be able to:
 
@@ -14,15 +14,15 @@ By the end of the lesson, you'll be able to:
    - Sequences.
 3. Understand the mathematical operations involved in attention mechanisms.
 
-### Key Concepts and Explanations
+## Key Concepts and Explanations
 
-#### **Real-World Analogy: Attention Mechanism**
+### Real-World Analogy: Attention Mechanism
 
 - Imagine conversing in a noisy hall. To focus on your colleague’s words:
-  - **You pay more attention to relevant conversations than background noise.**
+  - You pay more attention to relevant conversations than background noise.
   - Similarly, generative AI models focus on the **most relevant parts of the input data and their relationships** using attention mechanisms.
 
-#### **Understanding Attention Mechanisms through Python Dictionaries**
+### Understanding Attention Mechanisms through Python Dictionaries
 
 - **Python Dictionary as a Model**:
   - **Keys**: French words.
@@ -37,7 +37,7 @@ By the end of the lesson, you'll be able to:
 
 - Each row represents a word pairing. This structure is comparable to the **key-value structure in attention mechanisms**.
 
-#### **From Strings to Vectors**
+### **From Strings to Vectors**
 
 - **One-hot Encoded Vectors**:
   - French words are represented as one-hot encoded vectors, forming a **key matrix (K)**.
@@ -114,7 +114,7 @@ By the end of the lesson, you'll be able to:
   - Positional encodings may be included for sequence tasks (e.g., transformers).
   - For simpler tasks, positional encodings may not be required.
 
-### Recap: Key Takeaways
+## Recap: Key Takeaways
 
 1. **Core Components of Attention Mechanism**:
 
@@ -133,10 +133,10 @@ By the end of the lesson, you'll be able to:
 4. **Sequences**:
    - Attention for sequences involves processing multiple queries simultaneously using matrix operations.
 
-### Summary of Mathematical Formulas
+## Summary of Mathematical Formulas
 
 1. **Attention Output**:
-   \( h = Q \cdot K^T \cdot V \)
+   h = Q \* K^T \* V
 
 2. **Softmax Application**:
 
@@ -144,7 +144,5 @@ By the end of the lesson, you'll be able to:
 
 3. **One-Hot Encoding Refinement**:
    - Use embeddings instead of one-hot encoding to translate unseen words.
-
----
 
 This lesson provided a foundational understanding of attention mechanisms and their application in translation tasks. Further exploration of transformers and positional encodings builds upon these basics.

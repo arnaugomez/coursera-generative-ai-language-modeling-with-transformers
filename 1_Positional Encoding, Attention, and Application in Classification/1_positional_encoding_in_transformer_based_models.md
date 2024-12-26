@@ -1,13 +1,15 @@
-### Study Notes: Positional Encoding in Transformer-Based Models
+# Study Notes: Positional Encoding in Transformer-Based Models
 
-#### Introduction to Positional Encoding
+## Introduction to Positional Encoding
+
 - **Purpose**: Positional encoding is crucial in transformer-based models to capture the position of each token in a sequence. Tokens are processed independently and simultaneously in transformers, making positional information necessary to maintain semantic meaning.
 - **Learning Goals**:
   - Understand the importance of positional encoding.
   - Describe the techniques for achieving positional encoding.
   - Implement positional encoding in PyTorch.
 
-#### The Importance of Position in Sequences
+## The Importance of Position in Sequences
+
 - **Order Matters**: Just as the order of letters in a word determines its meaning, the position of tokens in a sequence affects semantic interpretation.
 - **Example**: Consider the phrases:
   - "King and Queen are awesome."
@@ -15,13 +17,15 @@
   - While similar, these sentences differ subtly in meaning due to word order.
 - Without positional encoding, embeddings for identical tokens (e.g., "King" and "Queen") would have the same vector representation regardless of position.
 
-#### Positional Encoding: How It Works
+## Positional Encoding: How It Works
+
 - **Purpose**: Introduce position information to input embeddings, enabling the model to differentiate between positions of tokens in a sequence.
 - **Example Outcome**:
   - Before positional encoding: Embeddings for "King" and "Queen" are identical in different sentences.
   - After positional encoding: Embeddings are modified to include positional information, making them distinct.
 
-#### How Positional Encoding Is Implemented
+## How Positional Encoding Is Implemented
+
 1. **Mathematical Representation**:
    - Positional encoding uses sine and cosine functions to create unique, periodic values for each position in the sequence.
    - It involves two parameters:
@@ -35,7 +39,8 @@
 3. **Integration with Embeddings**:
    - Positional encoding vectors are added to word embeddings to preserve the sequence order.
 
-#### Practical Implementation: Example Walkthrough
+## Practical Implementation: Example Walkthrough
+
 1. **Sequence Example**:
    - Sentence: "Transformers are awesome."
    - Sequence length: 3 (one embedding per word).
@@ -48,7 +53,8 @@
    - A table shows how positional encoding values modify the original embeddings.
    - Graphs depict positional encoding for each embedding dimension.
 
-#### Advanced Positional Encoding Techniques
+## Advanced Positional Encoding Techniques
+
 - **Scaling**:
   - Use an embedding dimension of 8 or more to reflect realistic settings.
   - Align maximum sequence size with vocabulary size if needed.
@@ -59,7 +65,8 @@
   - Used in models like BERT to provide additional positional context (e.g., sentence boundaries).
   - Integrated alongside positional encodings.
 
-#### PyTorch Implementation of Positional Encoding
+## PyTorch Implementation of Positional Encoding
+
 1. **Static Positional Encoding**:
    - Construct a module to add positional encoding to embeddings.
    - Ensure output shape exceeds the longest sequence in the training dataset.
@@ -70,7 +77,8 @@
    - Add positional encoding to embeddings and apply dropout.
    - Final output: Encoded tokens incorporating positional information.
 
-#### Recap: Key Concepts Learned
+## Recap: Key Concepts Learned
+
 - **Purpose**: Positional encoding integrates position information into embeddings, preserving sequence order.
 - **Mathematical Basis**:
   - Sine and cosine waves represent positional values.

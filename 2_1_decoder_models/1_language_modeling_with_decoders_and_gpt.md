@@ -1,6 +1,7 @@
 ### Study Notes: Language Modeling with Decoders and GPT-like Models
 
 #### Overview of Decoders in Transformers
+
 - **Transformers**:
   - Initially designed for language translation tasks.
   - Composed of two key components:
@@ -11,6 +12,7 @@
   - They form the foundation of sophisticated models like GPT, LLaMA, and Granite.
 
 #### Decoder Models for Text Generation
+
 - **Generative Pre-training (GPT)**:
   - A self-supervised approach.
   - Trains a decoder to predict the next token or word in a sequence.
@@ -19,6 +21,7 @@
   - Sequential generation ensures that the model adheres to context from prior inputs.
 
 #### Training Methods for Decoders
+
 - **Fine-Tuning**:
   - A supervised process that tailors pre-trained models to specific tasks, e.g., question-answering (QA) or classification.
 - **Reinforcement Learning from Human Feedback (RLHF)**:
@@ -26,10 +29,12 @@
   - A fine-tuning technique that incorporates human feedback.
 
 #### Key Characteristics of Decoders
+
 - Operate **without an encoder's input** during text generation.
 - Rely on **masked self-attention** to focus only on preceding tokens when making predictions.
 
 #### Process of Text Generation
+
 1. **Input Prompt**:
    - For example, a user prompt like "How are you?".
    - Models tokenize the input and add a special "beginning of sentence" (BOS) token if required.
@@ -46,6 +51,7 @@
    - Unlike static embeddings, contextual embeddings change depending on the surrounding words.
 
 #### Example: Generating a Response
+
 - Prompt: "How are you?"
   - BOS token is added.
   - Input is tokenized into ["how", "are", "you"].
@@ -57,6 +63,7 @@
   - This process repeats until an EOS token or another stopping condition is met.
 
 #### Attention Mechanisms in Decoders
+
 - **Masked Self-Attention**:
   - Ensures the model only attends to previous tokens, preserving the autoregressive nature.
 - **Matrix Multiplication**:
@@ -65,6 +72,7 @@
   - Used during both training and inference to maintain the autoregressive property.
 
 #### Decoder Components
+
 - **Word Embeddings**:
   - Represent words as vectors.
 - **Positional Encodings**:
@@ -76,6 +84,7 @@
   - Outputs of the model, used to predict the next token using an argmax operation.
 
 #### Differences Between Encoders and Decoders
+
 - **Encoders**:
   - Focus on understanding input sequences.
   - Use full self-attention mechanisms.
@@ -84,6 +93,7 @@
   - Use masked self-attention to ensure sequential generation.
 
 #### Summary of Key Concepts
+
 - Decoders are fundamental in text generation tasks.
 - GPT models are based on autoregressive decoders.
 - Fine-tuning and RLHF improve the model's ability to perform specialized tasks.

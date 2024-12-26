@@ -1,6 +1,6 @@
-### Study Notes: Transformers for Classification Encoder
+# Study Notes: Transformers for Classification Encoder
 
-#### Overview
+## Overview
 
 This video explains how **transformer-based models** are utilized for **text classification**. Key takeaways include:
 
@@ -8,16 +8,16 @@ This video explains how **transformer-based models** are utilized for **text cla
 - Building, training, and testing the transformer model.
 - Understanding the role of **attention layers** in retaining contextual relationships.
 
-### Key Concepts
+## Key Concepts
 
-#### Why Transformers for Text Classification?
+### Why Transformers for Text Classification?
 
 - Traditional neural networks lose **contextual relationships** between words in documents.
 - Transformers, with their **attention mechanisms**, process the entire sequence collectively, retaining contextual information.
 
 ### Steps to Build a Transformer Model for Text Classification
 
-#### 1. Dataset Preparation
+## 1. Dataset Preparation
 
 - **Dataset Used**: AG_NEWS dataset (contains news articles and their categories).
 - **Steps**:
@@ -29,7 +29,7 @@ This video explains how **transformer-based models** are utilized for **text cla
   4. **Tokenizer**: Tokenizes English text, generates tokens, and constructs a vocabulary.
   5. **Custom Collate Function**: Handles sequence classification and applies **zero padding** to standardize sequence lengths.
 
-#### 2. Model Construction
+## 2. Model Construction
 
 - **Embedding Layer**:
 
@@ -71,7 +71,7 @@ This video explains how **transformer-based models** are utilized for **text cla
   - **Prediction**:
     - Aggregated embeddings passed to the linear classifier to predict text categories.
 
-#### 3. Model Training
+## 3. Model Training
 
 - **Loss Function**: Cross-Entropy Loss for multi-class classification.
 - **Optimizer**: Stochastic Gradient Descent (SGD) with:
@@ -107,7 +107,7 @@ This video explains how **transformer-based models** are utilized for **text cla
 4. **Output**:
    - Model predicts text categories with improved accuracy due to context-aware processing.
 
-### Recap of Learning Outcomes
+## Recap of Learning Outcomes
 
 - Understand how transformers retain **context** using attention layers.
 - Build and train a **text classification model** using transformers.
