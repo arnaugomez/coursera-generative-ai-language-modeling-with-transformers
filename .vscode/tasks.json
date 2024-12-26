@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Create Markdown File",
+        "type": "shell",
+        "command": "bash",
+        "args": [
+          "-c",
+          "file_number=1; while true; do file_name=\"${file_number}.md\"; if [ ! -e \"$file_name\" ]; then pbpaste > \"$file_name\"; echo \"File created: $file_name\"; break; fi; ((file_number++)); done"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Create HTML File",
+        "type": "shell",
+        "command": "bash",
+        "args": [
+          "-c",
+          "file_number=1; while true; do file_name=\"${file_number}.html\"; if [ ! -e \"$file_name\" ]; then pbpaste > \"$file_name\"; echo \"File created: $file_name\"; break; fi; ((file_number++)); done"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+  
